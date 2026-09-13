@@ -321,7 +321,7 @@
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
@@ -342,7 +342,7 @@
         .skill-category h3 {
             font-size: 1.1rem;
             color: var(--secondary-color);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -354,20 +354,40 @@
             color: var(--primary-color);
         }
 
-        .tags {
+        .progress-list {
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        .tag {
-            background-color: var(--bg-light);
+        .progress-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            font-weight: 600;
             color: var(--secondary-color);
-            font-size: 0.85rem;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-weight: 500;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 8px;
+            background-color: var(--bg-light);
+            border-radius: 10px;
+            overflow: hidden;
             border: 1px solid var(--border-color);
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
         }
 
         .projects-grid {
@@ -757,64 +777,118 @@
         <div class="container">
             <div class="section-title">
                 <h2>Technical Skills</h2>
-                <p>Tools, Languages &amp; Methodologies</p>
+                <p>Tools, Languages &amp; Proficiency Levels</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
-                    <div class="tags">
-                        <span class="tag">C</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Java</span>
+                    <div class="progress-list">
+                        <div class="progress-item">
+                            <div class="progress-info"><span>C / C++</span><span>85%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>Python</span><span>80%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>Java</span><span>75%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 75%;"></div></div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-laptop-code"></i> Web Development</h3>
-                    <div class="tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">Responsive Design</span>
+                    <div class="progress-list">
+                        <div class="progress-item">
+                            <div class="progress-info"><span>HTML5 / CSS3</span><span>90%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>PHP</span><span>70%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 70%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>Responsive Design</span><span>85%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%;"></div></div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-database"></i> Database Management</h3>
-                    <div class="tags">
-                        <span class="tag">SQL</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">SQLite</span>
-                        <span class="tag">DBMS</span>
+                    <div class="progress-list">
+                        <div class="progress-item">
+                            <div class="progress-info"><span>SQL</span><span>80%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>MySQL</span><span>80%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>SQLite</span><span>75%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 75%;"></div></div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-palette"></i> Design &amp; UI/UX</h3>
-                    <div class="tags">
-                        <span class="tag">Figma</span>
-                        <span class="tag">UI/UX Design</span>
-                        <span class="tag">Wireframing</span>
-                        <span class="tag">Prototyping</span>
+                    <div class="progress-list">
+                        <div class="progress-item">
+                            <div class="progress-info"><span>Figma</span><span>85%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>UI/UX Design</span><span>80%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>Wireframing &amp; Prototyping</span><span>85%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%;"></div></div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h3><i class="fa-solid fa-screwdriver-wrench"></i> Developer Tools &amp; Concepts</h3>
-                    <div class="tags">
-                        <span class="tag">Git</span>
-                        <span class="tag">GitHub</span>
-                        <span class="tag">VS Code</span>
-                        <span class="tag">Android Studio</span>
-                        <span class="tag">DSA</span>
-                        <span class="tag">OOP</span>
-                        <span class="tag">NLP</span>
-                        <span class="tag">SADP</span>
+                    <h3><i class="fa-solid fa-screwdriver-wrench"></i> Core Concepts &amp; Tools</h3>
+                    <div class="progress-list">
+                        <div class="progress-item">
+                            <div class="progress-info"><span>DSA</span><span>80%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>OOP</span><span>85%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>Git / GitHub</span><span>80%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>NLP</span><span>70%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 70%;"></div></div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-bullhorn"></i> Digital Marketing</h3>
-                    <div class="tags">
-                        <span class="tag">SEO</span>
-                        <span class="tag">Social Media Marketing</span>
-                        <span class="tag">Content Strategy</span>
+                    <div class="progress-list">
+                        <div class="progress-item">
+                            <div class="progress-info"><span>SEO</span><span>75%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 75%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>Social Media Marketing</span><span>80%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info"><span>Content Strategy</span><span>70%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 70%;"></div></div>
+                        </div>
                     </div>
                 </div>
             </div>
