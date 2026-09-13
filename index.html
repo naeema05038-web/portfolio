@@ -5,18 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naeema Begum | Software Engineering Student &amp; Portfolio</title>
 
-    <!-- Google Fonts: Inter and Lora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* ==========================================================================
-           1. CSS VARIABLES & RESET
-           ========================================================================== */
         :root {
             --primary-color: #2d7a7a;
             --primary-hover: #225c5c;
@@ -59,9 +54,6 @@
             list-style: none;
         }
 
-        /* ==========================================================================
-           2. UTILITIES & REUSABLE COMPONENTS
-           ========================================================================== */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -128,9 +120,6 @@
             transform: translateY(-2px);
         }
 
-        /* ==========================================================================
-           3. NAVBAR
-           ========================================================================== */
         .navbar {
             background-color: var(--bg-white);
             border-bottom: 1px solid var(--border-color);
@@ -176,9 +165,6 @@
             display: none;
         }
 
-        /* ==========================================================================
-           4. HERO SECTION
-           ========================================================================== */
         .hero {
             padding: 80px 0 100px;
             background-color: var(--bg-white);
@@ -269,9 +255,6 @@
             display: block;
         }
 
-        /* ==========================================================================
-           5. ABOUT & EDUCATION SECTION
-           ========================================================================== */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -336,9 +319,6 @@
             color: var(--text-muted);
         }
 
-        /* ==========================================================================
-           6. SKILLS SECTION
-           ========================================================================== */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -390,9 +370,6 @@
             border: 1px solid var(--border-color);
         }
 
-        /* ==========================================================================
-           7. PROJECTS SECTION
-           ========================================================================== */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -463,9 +440,6 @@
             color: var(--primary-hover);
         }
 
-        /* ==========================================================================
-           8. SERVICES SECTION
-           ========================================================================== */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -510,9 +484,6 @@
             color: var(--text-muted);
         }
 
-        /* ==========================================================================
-           9. CONTACT SECTION
-           ========================================================================== */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
@@ -621,9 +592,6 @@
             min-height: 120px;
         }
 
-        /* ==========================================================================
-           10. FOOTER
-           ========================================================================== */
         .footer {
             background-color: var(--secondary-color);
             color: #a0aec0;
@@ -637,9 +605,6 @@
             margin: 0;
         }
 
-        /* ==========================================================================
-           11. MEDIA QUERIES (RESPONSIVENESS)
-           ========================================================================== */
         @media (max-width: 992px) {
             .hero-grid, .about-grid, .contact-grid {
                 grid-template-columns: 1fr;
@@ -702,7 +667,6 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">Naeema<span>.</span></a>
@@ -720,7 +684,6 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
@@ -750,13 +713,12 @@
             </div>
             <div class="hero-image-wrapper">
                 <div class="avatar-box">
-                    <img src="8106b95c-da9d-4826-969c-cea2c610a5b2.jpg" alt="Naeema Begum Profile Picture">
+                    <img src="5e669c8e-74c5-4543-a492-df7eb4c335cc.jpg" alt="Naeema Begum Profile Picture">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section id="about" class="section-padding">
         <div class="container">
             <div class="section-title">
@@ -791,7 +753,6 @@
         </div>
     </section>
 
-    <!-- SKILLS SECTION -->
     <section id="skills" class="section-padding" style="background-color: var(--bg-white);">
         <div class="container">
             <div class="section-title">
@@ -860,7 +821,6 @@
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
     <section id="projects" class="section-padding">
         <div class="container">
             <div class="section-title">
@@ -1023,7 +983,6 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
     <section id="services" class="section-padding" style="background-color: var(--bg-white);">
         <div class="container">
             <div class="section-title">
@@ -1070,7 +1029,6 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section id="contact" class="section-padding">
         <div class="container">
             <div class="section-title">
@@ -1131,7 +1089,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Naeema Begum. All rights reserved.</p>
