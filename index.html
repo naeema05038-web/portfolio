@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naeema Begum | Software Engineering Student & Portfolio</title>
+    <title>Naeema Begum | Software Engineering Student &amp; Portfolio</title>
 
     <!-- Google Fonts: Inter and Lora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -92,12 +92,15 @@
         }
 
         .btn {
-            display: inline-block;
-            padding: 12px 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
             border-radius: 8px;
             font-weight: 600;
             font-size: 0.95rem;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             cursor: pointer;
         }
 
@@ -126,7 +129,7 @@
         }
 
         /* ==========================================================================
-           3. NAVBAR (PURE CSS TOGGLE FOR MOBILE)
+           3. NAVBAR
            ========================================================================== */
         .navbar {
             background-color: var(--bg-white);
@@ -211,6 +214,7 @@
 
         .hero-buttons {
             display: flex;
+            flex-wrap: wrap;
             gap: 15px;
             margin-bottom: 40px;
         }
@@ -251,14 +255,18 @@
             width: 280px;
             height: 280px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--bg-white);
-            font-size: 6rem;
+            overflow: hidden;
             box-shadow: var(--card-hover-shadow);
             border: 6px solid var(--bg-white);
+            background-color: var(--bg-light);
+        }
+
+        .avatar-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
         }
 
         /* ==========================================================================
@@ -343,7 +351,7 @@
             border-radius: 12px;
             box-shadow: var(--card-shadow);
             border: 1px solid var(--border-color);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .skill-category:hover {
@@ -400,7 +408,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: all 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
         }
 
         .project-card:hover {
@@ -470,7 +478,7 @@
             border-radius: 12px;
             box-shadow: var(--card-shadow);
             border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .service-card:hover {
@@ -600,11 +608,12 @@
             font-family: var(--font-body);
             font-size: 0.95rem;
             outline: none;
-            transition: border-color 0.3s ease;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .form-control:focus {
             border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(45, 122, 122, 0.15);
         }
 
         textarea.form-control {
@@ -671,7 +680,6 @@
                 color: var(--secondary-color);
             }
 
-            /* CSS Only Menu Toggle */
             .nav-toggle:checked ~ .nav-menu {
                 display: flex;
             }
@@ -688,16 +696,13 @@
             .avatar-box {
                 width: 200px;
                 height: 200px;
-                font-size: 4rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ==========================================================================
-       NAVBAR
-       ========================================================================== -->
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">Naeema<span>.</span></a>
@@ -715,20 +720,18 @@
         </div>
     </nav>
 
-    <!-- ==========================================================================
-       HERO SECTION
-       ========================================================================== -->
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
                 <h1>Naeema Begum</h1>
-                <div class="hero-tagline">Problem Solver · UI/UX Designer · Aspiring Web Developer</div>
+                <div class="hero-tagline">Problem Solver &bull; UI/UX Designer &bull; Software Developer</div>
                 <p class="hero-bio-short">
-                    3rd Year BSc Software Engineering Student passionate about building real-world solutions. Actively seeking internship opportunities.
+                    3rd Year BSc Software Engineering Student passionate about building real-world software solutions and solving algorithmic problems. Actively seeking software engineering internship opportunities.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-code"></i> View Projects</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -747,26 +750,24 @@
             </div>
             <div class="hero-image-wrapper">
                 <div class="avatar-box">
-                    <i class="fa-solid fa-user-gear"></i>
+                    <img src="8106b95c-da9d-4826-969c-cea2c610a5b2.jpg" alt="Naeema Begum Profile Picture">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       ABOUT & EDUCATION
-       ========================================================================== -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="section-padding">
         <div class="container">
             <div class="section-title">
                 <h2>About Me</h2>
-                <p>Background & Academic Journey</p>
+                <p>Background &amp; Academic Journey</p>
             </div>
             <div class="about-grid">
                 <div class="about-card">
                     <h3><i class="fa-solid fa-user"></i> Biography</h3>
                     <p>
-                        I'm Naeema Begum, a 3rd Year BSc Software Engineering student passionate about building real-world solutions with C, C++, Python, Java, and SQL. I've solved 290+ Codeforces problems and built 9+ projects including a voice-based Android app for elderly care. I'm also skilled in UI/UX Design (Figma) and currently learning Web Development (HTML, CSS, PHP).
+                        I'm Naeema Begum, a 3rd Year BSc Software Engineering student passionate about building real-world solutions with C, C++, Python, Java, and SQL. I've solved 290+ Codeforces problems and built 9+ projects including a voice-based Android app for elderly care. I am proficient in UI/UX Design (Figma) and actively developing modern web applications with HTML, CSS, and PHP.
                     </p>
                 </div>
                 <div class="education-card">
@@ -790,18 +791,16 @@
         </div>
     </section>
 
-    <!-- ==========================================================================
-       SKILLS SECTION
-       ========================================================================== -->
+    <!-- SKILLS SECTION -->
     <section id="skills" class="section-padding" style="background-color: var(--bg-white);">
         <div class="container">
             <div class="section-title">
                 <h2>Technical Skills</h2>
-                <p>Tools, Technologies & Problem Solving</p>
+                <p>Tools, Languages &amp; Methodologies</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fa-solid fa-code"></i> Languages</h3>
+                    <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
                     <div class="tags">
                         <span class="tag">C</span>
                         <span class="tag">C++</span>
@@ -819,15 +818,16 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fa-solid fa-database"></i> Database</h3>
+                    <h3><i class="fa-solid fa-database"></i> Database Management</h3>
                     <div class="tags">
                         <span class="tag">SQL</span>
                         <span class="tag">MySQL</span>
+                        <span class="tag">SQLite</span>
                         <span class="tag">DBMS</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fa-solid fa-palette"></i> Design & UI/UX</h3>
+                    <h3><i class="fa-solid fa-palette"></i> Design &amp; UI/UX</h3>
                     <div class="tags">
                         <span class="tag">Figma</span>
                         <span class="tag">UI/UX Design</span>
@@ -836,7 +836,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools & Concepts</h3>
+                    <h3><i class="fa-solid fa-screwdriver-wrench"></i> Developer Tools &amp; Concepts</h3>
                     <div class="tags">
                         <span class="tag">Git</span>
                         <span class="tag">GitHub</span>
@@ -853,28 +853,25 @@
                     <div class="tags">
                         <span class="tag">SEO</span>
                         <span class="tag">Social Media Marketing</span>
-                        <span class="tag">Content Marketing</span>
+                        <span class="tag">Content Strategy</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       PROJECTS SECTION
-       ========================================================================== -->
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="section-padding">
         <div class="container">
             <div class="section-title">
                 <h2>Featured Projects</h2>
-                <p>Academic & Personal Work</p>
+                <p>Academic &amp; Personal Portfolio</p>
             </div>
             <div class="projects-grid">
-                <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Aponjon – Android App for Elderly Care</h3>
-                        <p class="project-description">Voice-based emotional support app using voice recognition and AI for elderly care (In Progress).</p>
+                        <h3>Aponjon &ndash; Android App for Elderly Care</h3>
+                        <p class="project-description">Voice-activated emotional support app for elderly citizens using voice recognition and artificial intelligence (In Progress).</p>
                     </div>
                     <div>
                         <div class="project-tech">
@@ -888,11 +885,10 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Portfolio Website</h3>
-                        <p class="project-description">Modern, clean, and responsive personal portfolio built with HTML and CSS.</p>
+                        <h3>Personal Portfolio Website</h3>
+                        <p class="project-description">Modern, accessible, and responsive developer portfolio built with semantic HTML5 and clean CSS3.</p>
                     </div>
                     <div>
                         <div class="project-tech">
@@ -905,11 +901,10 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>News Blog System</h3>
-                        <p class="project-description">DBMS-based news blog with Python and MySQL featuring user authentication and full CRUD operations.</p>
+                        <h3>News Blog Management System</h3>
+                        <p class="project-description">DBMS-backed news blogging platform using Python and MySQL, featuring user authentication and full CRUD data handling.</p>
                     </div>
                     <div>
                         <div class="project-tech">
@@ -923,11 +918,10 @@
                     </div>
                 </div>
 
-                <!-- Project 4 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>AI Chatbot</h3>
-                        <p class="project-description">NLP-powered intelligent chatbot implemented with Python, NLTK, and Flask framework.</p>
+                        <h3>AI Chatbot Application</h3>
+                        <p class="project-description">NLP-powered intelligent chatbot web application built with Python, NLTK library, and Flask back-end.</p>
                     </div>
                     <div>
                         <div class="project-tech">
@@ -941,11 +935,10 @@
                     </div>
                 </div>
 
-                <!-- Project 5 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Mental Health NLP System</h3>
-                        <p class="project-description">Python-based sentiment analysis and text processing system using pandas and scikit-learn.</p>
+                        <h3>Mental Health Sentiment Analysis NLP</h3>
+                        <p class="project-description">Python-based Natural Language Processing system analyzing emotional state and text sentiment using pandas &amp; scikit-learn.</p>
                     </div>
                     <div>
                         <div class="project-tech">
@@ -959,11 +952,10 @@
                     </div>
                 </div>
 
-                <!-- Project 6 -->
                 <div class="project-card">
                     <div class="project-header">
                         <h3>Hotel Management System</h3>
-                        <p class="project-description">Java-based hotel management system handling room booking, customer records, and billing management.</p>
+                        <p class="project-description">Java Swing desktop application for hotel booking, guest management, records tracking, and bill generation.</p>
                     </div>
                     <div>
                         <div class="project-tech">
@@ -977,11 +969,10 @@
                     </div>
                 </div>
 
-                <!-- Project 7 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>SignBridge UI/UX Design</h3>
-                        <p class="project-description">Complete UI/UX design prototype created in Figma for a sign language translation application.</p>
+                        <h3>SignBridge UI/UX Prototype</h3>
+                        <p class="project-description">End-to-end design system, wireframe structure, and interactive prototype for a sign language translation app created in Figma.</p>
                     </div>
                     <div>
                         <div class="project-tech">
@@ -989,17 +980,16 @@
                             <span class="tech-badge">Wireframes</span>
                             <span class="tech-badge">Prototypes</span>
                         </div>
-                        <a href="https://www.figma.com/design/1XbdJhESEhlKJBenPGmUos/uiux?node-id=0-1&p=f&t=ohUeySZMJBDXdKAp-0" target="_blank" class="project-link">
-                            View Figma Design <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <a href="https://www.figma.com/design/1XbdJhESEhlKJBenPGmUos/uiux?node-id=0-1&amp;p=f&amp;t=ohUeySZMJBDXdKAp-0" target="_blank" class="project-link">
+                            View Figma Prototype <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Project 8 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Problem Solving Solutions</h3>
-                        <p class="project-description">A collection of algorithms and data structures implemented while solving 290+ Codeforces challenges.</p>
+                        <h3>Algorithmic Problem Solving</h3>
+                        <p class="project-description">A collection of custom algorithmic solutions and data structures implemented across 290+ Codeforces challenges.</p>
                     </div>
                     <div>
                         <div class="project-tech">
@@ -1013,11 +1003,10 @@
                     </div>
                 </div>
 
-                <!-- Project 9 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Academic Projects Showcase</h3>
-                        <p class="project-description">Various coursework projects covering Object-Oriented Programming and System Analysis & Design.</p>
+                        <h3>Software Engineering Coursework</h3>
+                        <p class="project-description">Repository of university projects focusing on Object-Oriented Programming, System Analysis, and Database Design.</p>
                     </div>
                     <div>
                         <div class="project-tech">
@@ -1030,80 +1019,69 @@
                         </a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       SERVICES SECTION
-       ========================================================================== -->
+    <!-- SERVICES SECTION -->
     <section id="services" class="section-padding" style="background-color: var(--bg-white);">
         <div class="container">
             <div class="section-title">
-                <h2>Services I Offer</h2>
-                <p>Student Capabilities & Skills</p>
+                <h2>Services &amp; Capabilities</h2>
+                <p>Areas of Expertise &amp; Technical Solutions</p>
             </div>
             <div class="services-grid">
-                <!-- Service 1 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
                     <h3>UI/UX Design</h3>
-                    <p>I can create wireframes, simple prototypes, and clean UI layouts using Figma. I focus on clean, modern, and user-friendly designs.</p>
+                    <p>Creating user-centered wireframes, clean visual layouts, and interactive prototypes using Figma for modern web and mobile apps.</p>
                 </div>
 
-                <!-- Service 2 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
                     <h3>Software Development</h3>
-                    <p>I can build basic desktop and console applications in C, C++, Python, and Java. I've completed 9+ projects including an Android app.</p>
+                    <p>Building reliable desktop, console, and mobile applications using C, C++, Python, and Java grounded in OOP principles.</p>
                 </div>
 
-                <!-- Service 3 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-database"></i></div>
                     <h3>Database Management</h3>
-                    <p>I can design simple databases and write SQL queries using MySQL and SQLite for basic software applications.</p>
+                    <p>Designing normalized database schemas, crafting SQL queries, and integrating relational databases (MySQL/SQLite).</p>
                 </div>
 
-                <!-- Service 4 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
-                    <h3>Problem Solving</h3>
-                    <p>I've solved 290+ Codeforces problems and have a strong foundation in Data Structures, Algorithms, and logical problem solving.</p>
+                    <h3>Problem Solving &amp; DSA</h3>
+                    <p>Applying Data Structures and Algorithms to solve complex logic challenges, verified by 290+ solved Codeforces problems.</p>
                 </div>
 
-                <!-- Service 5 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
                     <h3>Web Development</h3>
-                    <p>Currently learning HTML, CSS, and PHP to build responsive, accessible, and static websites.</p>
+                    <p>Developing responsive, semantic web interfaces using HTML, CSS, PHP, and modern web standards.</p>
                 </div>
 
-                <!-- Service 6 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
                     <h3>Digital Marketing</h3>
-                    <p>Learning SEO fundamentals, social media marketing concepts, and digital content management strategies.</p>
+                    <p>Applying Search Engine Optimization (SEO) fundamentals and digital branding strategies to increase web visibility.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-       CONTACT SECTION
-       ========================================================================== -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section-padding">
         <div class="container">
             <div class="section-title">
                 <h2>Get In Touch</h2>
-                <p>Let's Connect & Collaborate</p>
+                <p>Let's Connect &amp; Collaborate</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-info">
                     <div>
                         <h3>Contact Details</h3>
-                        <p>Feel free to reach out for internship opportunities, project collaborations, or any inquiries.</p>
+                        <p>Feel free to reach out for internship opportunities, software engineering projects, or technical inquiries.</p>
                         
                         <div class="contact-details">
                             <div class="contact-detail-item">
@@ -1153,9 +1131,7 @@
         </div>
     </section>
 
-    <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Naeema Begum. All rights reserved.</p>
